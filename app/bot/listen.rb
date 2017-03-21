@@ -60,6 +60,33 @@ Bot.on :message do |message|
   	message.reply(text: projects_message)
   when "bye" 
     message.reply(text: 'Bye and thanks for chatting with me!')
+  when "wat up"
+  	message.reply( #### this is experimental, not sure if it works yet ####
+			attachment: {
+		    type: 'template',
+		    payload: {
+		      template_type: 'generic',
+		      elements: {
+		      	[
+		      		title: "Jon's Resume",
+		      		# image_url: "someurl",
+		      		subtitle: "hey here is the resume info",
+		      		buttons: [
+		      			{ type: 'postback', title: "see resume", payload: 'SEE_RESUME' }
+		      		]
+		      	]
+		      }
+		    }
+		  }
+		  #     text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
+		  #     buttons: [
+		  #       { type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
+		  #       { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
+		  #       { type: 'postback', title: "Jon's projects", payload: 'PROJECTS' }
+		  #     ]
+		  #   }
+		  # }
+  	)
   else
   	message.reply(
 		  attachment: {
