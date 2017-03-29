@@ -66,16 +66,17 @@ Bot.on :message do |message|
 		    type: 'template',
 		    payload: {
 		      template_type: 'generic',
-		      elements: {
-		      	[
-		      		title: "Jon's Resume",
-		      		# image_url: "someurl",
-		      		subtitle: "hey here is the resume info",
-		      		buttons: [
-		      			{ type: 'postback', title: "see resume", payload: 'SEE_RESUME' }
-		      		]
-		      	]
-		      }
+		      image_aspect_ratio: 'SQUARE',
+		      elements: [
+	      		title: "Learn About Jon",
+	      		image_url: "https://lh3.googleusercontent.com/OLF0M_R2mXGSg29XXBj_CQyfJoVhxmdy60KFQsu0TZJ8JRZVQShQclwHYleTcmJm4Lq9GNpPSCbhi-K_0lRrbZzaWya4xjrHpf1vXCvDggDad2edPEq9ZMaMzM8bYMJpAHXzBubZ-7VooHxXcasi8gc8yzhdrvvDTXGWgwIU3TZjckjillvj1V4VEGu9E15xJUyI1vrjDJ9X-qKWgJ5VoS5lrTvavhJnBLzDvWluNjlcH3KFTeGyxrp8xmCmT_MS6NPlJldo76D7fO1n_n96hlmMCJBF025DaHhQdWfVjKoqaa1vA2bszUDlrpRtHbyOpcU0hFgA2xkcucJx0RvUax0bkAYQGqDpRTKXDP6DGXxX2fhF3zFuVMWOjHHlvN0gANlpRIa5s_-NgJcdzsPdSGexQ8lrjJtshJ0U9XL8GsbC5YvmqrIc7fsh68rvyMBUL-SNpLn4Mc97AgQOOPu7-yeanpK9nsl_fbAt4VRKZ_hcfUm0Ctr4HwmhMps2ocUGpRpbwDMqWHy8-5-STe6yQfKYrYynubZHDtDgLmGb0MrDhowg8jC5DHCuvh3TTAkGJVv7fS2sBEi6H0Bzlyz92aZIlkWiKaLdcUR9yYc8fjmgaE9vkKtL=w1486-h836-no",
+	      		subtitle: "Click on one of the following buttons to find out more about Jon...",
+	      		buttons: [
+		      		{ type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
+			        { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
+			        { type: 'postback', title: "Jon's projects", payload: 'PROJECTS' }
+	      		]
+		      ]
 		    }
 		  }
 		  #     text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
@@ -113,6 +114,8 @@ Bot.on :postback do |postback|
     	deliver_message(postback.sender['id'], skills_message)
     when 'PROJECTS'
     	deliver_message(postback.sender['id'], projects_message)
+    when 'SEE_RESUME'
+    	deliver_message(postback.sender['id'], "Testing one two three")
     else
     	deliver_message(postback.sender['id'], "I'm sorry, I didn't understand that...")
   end
