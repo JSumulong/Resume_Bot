@@ -113,7 +113,7 @@ def deliver_vacationer_message(recipient_id)
 			      template_type: 'generic',
 			      image_aspect_ratio: 'HORIZONTAL',
 			      elements: [
-		      		title: "Vacationer",
+		      		title: "Vacationer is a mock travel site emphasizing design and composition with React",
 		      		image_url: "http://gdurl.com/eEOj",
 		      		subtitle: "Tech used: React.js, HTML, CSS, Javascript, Webpack, Babel",
 		      		buttons: [
@@ -140,9 +140,9 @@ def deliver_congo_message(recipient_id)
 			      template_type: 'generic',
 			      image_aspect_ratio: 'HORIZONTAL',
 			      elements: [
-		      		title: "Congo Directory",
+		      		title: "Congo Directory: a business directory built with Rails for a small startup",
 		      		image_url: "http://gdurl.com/Nv92",
-		      		subtitle: "congo",
+		      		subtitle: "Tech: Rails, HTML, CSS, Javascript, PostGreSQL, Faker, Bootstrap",
 		      		buttons: [
 		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Congo_Directory', title: "View GitHub Repo" }
 		      		]
@@ -167,9 +167,9 @@ def deliver_remindr_message(recipient_id)
 			      template_type: 'generic',
 			      image_aspect_ratio: 'HORIZONTAL',
 			      elements: [
-		      		title: "Remindr",
+		      		title: "Remindr was a group project built at DBC that sends scheduled texts as reminders",
 		      		image_url: "http://gdurl.com/xRTo",
-		      		subtitle: "rem",
+		      		subtitle: "Tech: Rails, Twilio API, Heroku Scheudler, PostGreSQL, Bootstrap",
 		      		buttons: [
 		      			{ type: 'web_url', url: 'https://github.com/JSumulong/remindr', title: "View GitHub Repo" }
 		      		]
