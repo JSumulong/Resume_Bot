@@ -20,7 +20,7 @@ def deliver_projects_message(recipient_id)
 			      	{
 			      		title: "Resume Bot",
 			      		image_url: "http://gdurl.com/l0yP",
-			      		subtitle: "A bot that utilizes a Rails server to respond to messages via Facebook Messenger.",
+			      		subtitle: "Rails server that delivers resume info to fb messenger",
 			      		buttons: [
 			      			{
 			      				type: 'postback',
@@ -32,7 +32,7 @@ def deliver_projects_message(recipient_id)
 		      		{
 		      			title: "Vacationer",
 			      		image_url: "http://gdurl.com/Z49S",
-			      		subtitle: "Built with React, this is a mock travel agency website with an emphasis on front end design and composition with React components.",
+			      		subtitle: "Front-end project built with react.js",
 			      		buttons: [
 				      		{ 
 				      			type: 'postback',
@@ -43,8 +43,8 @@ def deliver_projects_message(recipient_id)
 			      	},
 			      	{
 			      		title: "Congo Directory",
-			      		image_url: "https://lh3.googleusercontent.com/18-ov_ve0Va8E83ApzgSM_2tlqGyvwJL1oZObbxanT-EHYnBKNazkM8fA6fa4eHkn9Sbtkkpg8rUoERw9dFgYF-1KahTwRFu0fC6-ELptfWUDoQNcj4Zf34L7p6psPwesdgXKTtSkG2Dod0irMF1PCM0gNnB4WmWT5CJs0YOuJdSeqt4R_2PdZ1tnF3CPMtKQZnuKW1npzKBWovwTb8dPN-IizHoB84zv57T0547zK9vrYxQrQnfkYbibDv4THDAOF1lSW0GtjPWNlT7iYv8esC96MRtQvNRFwoSasHEKNiY93wA12eYSOM_B3D626WkT-ZiEWZ8jRk9JceoA7hSFfAvqvfLhSah1S7ETongQv2oQ3OoJJibb46ccK7d1dlh3-C78hQeQWuumto3f1RzzXXMzEUJWyiqe4zI0vj1XJgtnpmFFVGcoW_XYoMXc5MCpoQNuYFSbGjkZbDcbTS0gzVMywppc1a8sAsTjD85ngKD9ekGIZObUIjmUgN9wcwsNUsjOr3uIJz5qh1YRylJFVaowHs0vRbxDr5S15k9-_91BB6sgKGszF6CglGMZqJOQBrmuHP7tM3AkifhX4AFxNkyQu-Mu0Ep1ZRVSjemMG5fLNJrIzgL=w1486-h936-no",
-			      		subtitle: "Built with Ruby on Rails, this is a directory for local businesses in the Democratic Repulic of Congo.",
+			      		image_url: "http://gdurl.com/i04s",
+			      		subtitle: "Businesses directory  built with Rails",
 			      		buttons: [
 			      			{
 			      				type: 'postback',
@@ -55,8 +55,8 @@ def deliver_projects_message(recipient_id)
 			      	},
 			      	{
 			      		title: "Remindr",
-			      		image_url: "https://lh3.googleusercontent.com/4sbauG2sgtFJXNSE_29J1iBD_4fO4VsloMWxKC-WL24EnyqZ9J5IOlcuz_U6P0EFtOfaK7udsN9dpwNKhQryiO5ZE-OvShKiQrOEeWPRgjsQ-itWHd_JTqTHqaHDTFe2DRYYPC4anRKOWnOwEP8Cm7tNgaIuow9er9hKlJT07uVVPVVr49OS2OKglHTpoqDT2hGojzmeHtRexL0ur2WJ5qCy3KtRZWwQ3kTtHaq5FLD_z3vD5W8ruFdoe7G9n0ALjm43QbYvKwAOeQRmyVVNLJJ6sqlCczib-NQOCBq92VRvDcNFdn98YOms-ZMLtYdIb1Z8v93JgaCOCK5Z-EsHojpJmArhF2EVcXPYXyo3e8-JnGy-S60Hc9GMi8SxIRy5AbqrAsVg9upa3rfp2TYADBQ6isxQjrXuY3tn3xmouTH7zrYD5TgkZS_IRKV-Mw7WDZNE7IqGYey7vVMwKi_OPfLQMeKw8Bqab_WLK0vYUhECgJ_-1mZ1stpE_wXn6jr1SqWH4TX-LDe7ohDHEGygmourZ6fPUZLp70L8BZQeyKCh4oIAbcanlhkGZ6xOtW97AXaDbdnu-jz5LIKocfm44Wk2iPTWw42Xnnl00rjYNCz4ye9FoQi_=w1486-h862-no",
-			      		subtitle: "Built with Ruby on Rails, this is a web app that sends reminders via text to a user's contacts.",
+			      		image_url: "http://gdurl.com/apc6",
+			      		subtitle: "Rails project that sends scheduled text messages as reminders",
 			      		buttons: [
 			      			{
 			      				type: 'postback',
@@ -114,10 +114,10 @@ def deliver_vacationer_message(recipient_id)
 			      image_aspect_ratio: 'HORIZONTAL',
 			      elements: [
 		      		title: "Vacationer",
-		      		image_url: "https://lh3.googleusercontent.com/y1k0ynx9cApP6zrPX-p0r1T2WOC6qjoLvXn-jV405z7b5sFkuQCYcaL49pUv-_u5dsaD3PWqxDuKCzfh6ELKJQ9TTEOR2KmEWTpNs-5ezHbE5jXbXu706jO7yLzfzJO-ksNUppd6uhzsvaR19ZxNXFI291Cbwv6iVKDsh9Gs7UXdl0y9Thjw2z8hsuH4W9zBSz_PSKMvBNkLITrmD0rL_RyYzejb3lGQqMWNgvHtWnJYW9XW6VgS1HSUJZHZSlkAWkv-LzJ5RX55tRYIVe5G2Z9_Va4UreE4kPFZp1Aa_5hIGOJVFnAfuAz89QywsBjRCEnFi73ByC-OmfZQlqUgev3gFYlgyYVEJTHt-NsuQpb6H6QqVVL2It6lFVOo6ad3EmNgMs3XbFstfSg3iNESqhiobpD9KAxKnRusjQQkBjkepobeHSTBET6m4E9DbmZXFHwGKbbQAz1YE7qBMDr-3uLRHPecyN7zN73uDykDe0Wwoc6gD2nNUV2QzcBjsLCIWaH39YexbrMbl3zitJlcEu931L1YQmfChqrWwOg6JM4FQx-bi62pYMmBWqMWm9GcRGW2MqVym0exjFPIvcLPCOM0feb6cPVMkn6o6_9p4vO5kae3gyzI=w1486-h618-no",
+		      		image_url: "http://gdurl.com/eEOj",
 		      		subtitle: "Tech used: React.js, HTML, CSS, Javascript, Webpack, Babel",
 		      		buttons: [
-		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Resume_Bot', title: "View GitHub Repo" }
+		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Vacationer', title: "View GitHub Repo" }
 		      		]
 			      ]
 			    }
@@ -127,6 +127,59 @@ def deliver_vacationer_message(recipient_id)
 	)
 end
 
+def deliver_congo_message(recipient_id)
+	Bot.deliver(
+		{
+		  recipient: {
+		    id: recipient_id
+		  },
+		  message: {
+			  attachment: {
+			    type: 'template',
+			    payload: {
+			      template_type: 'generic',
+			      image_aspect_ratio: 'HORIZONTAL',
+			      elements: [
+		      		title: "Congo Directory",
+		      		image_url: "http://gdurl.com/Nv92",
+		      		subtitle: "congo",
+		      		buttons: [
+		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Congo_Directory', title: "View GitHub Repo" }
+		      		]
+			      ]
+			    }
+			  }
+		  }
+		}, access_token: ENV['ACCESS_TOKEN']
+	)
+end
+
+def deliver_remindr_message(recipient_id)
+	Bot.deliver(
+		{
+		  recipient: {
+		    id: recipient_id
+		  },
+		  message: {
+			  attachment: {
+			    type: 'template',
+			    payload: {
+			      template_type: 'generic',
+			      image_aspect_ratio: 'HORIZONTAL',
+			      elements: [
+		      		title: "Remindr",
+		      		image_url: "http://gdurl.com/xRTo",
+		      		subtitle: "rem",
+		      		buttons: [
+		      			{ type: 'web_url', url: 'https://github.com/JSumulong/remindr', title: "View GitHub Repo" }
+		      		]
+			      ]
+			    }
+			  }
+		  }
+		}, access_token: ENV['ACCESS_TOKEN']
+	)
+end
 
 # Bot Response
 Bot.on :message do |message|
@@ -192,6 +245,10 @@ Bot.on :postback do |postback|
     	deliver_bot_message(postback.sender['id'])
     when 'VACATIONER'
     	deliver_vacationer_message(postback.sender['id'])
+    when 'CONGO_DIRECTORY'
+    	deliver_congo_message(postback.sender['id'])
+    when 'REMINDR'
+    	deliver_remindr_message(postback.sender['id'])
     else
     	deliver_message(postback.sender['id'], "I'm sorry, I didn't understand that...")
   end
