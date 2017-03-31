@@ -19,7 +19,7 @@ def deliver_projects_message(recipient_id)
 			      elements: [
 			      	{
 			      		title: "Resume Bot",
-			      		image_url: "https://lh3.googleusercontent.com/h9EQ0I8W_7ms0-QKxAyTRZuYHAxSYSf1SUecTWdI2A7R1bjmfFQSpJO9EB9rJQ3RpyVhz4eRQCkMktoZcvZWrDIA8NCijetczlqg3oR7RZM_6m8cFUhiJG2vRLlCdeCW_KzIRuWIRbqzLSSkJiWV1vXgl8XG_YVyLUomibiRDH-tSlaiSN4p79PBkOIrpsCtszpsX4yq8UkM_tq-qaSY-p4IT7LKVrCKeOZC20iH-l3xwuwO69JKJpabpsII8_39ien8LUZAtQRASSFUDawjUWfFsIVDrYmXs2_dtX-bPZccl0Srh56MFY6dZKtk22pXqHQJrFt1UwYgxIsm7wnFtKnLGUJESRFbDk1inpLdK0-Kz_zXrLZ3iShuU-z0X2Pd8epdnjE9_Mz9ODMLST5rwSitdetBF2vADJA-XS52ni2znWNUlr0VnH0rK3HA7TcJ3eFBaACyF9CffgBaa0zPwURR9P4OF3dK-WENzkaB2szEl0Ua5yaGYQ-zejKTfN-hYdLdR0rHgE0kCvnu8ZjZnw3Rl8nrvmCR9pnZB9yTOCXfbn91a2WmM0djsQcam4-opXoxLqbE-bCvuLrColZw4bhGtIM3g06fY7PL7ZYGljP3iH0gir2v=w646-h678-no",
+			      		image_url: "http://gdurl.com/l0yP",
 			      		subtitle: "A bot that utilizes a Rails server to respond to messages via Facebook Messenger.",
 			      		buttons: [
 			      			{
@@ -31,7 +31,7 @@ def deliver_projects_message(recipient_id)
 			      	}, 
 		      		{
 		      			title: "Vacationer",
-			      		image_url: "https://lh3.googleusercontent.com/rsYz2eguUaF-wPRJ-FTfTNpBiSkpRdd7m4p8LFZGwkjCmKIdeRmptI0sp8ZkV18Z88SYd1YxDPoSEIeu-WC-0o5MjaLptSY0bHtB76TvcwTgB_jANV9R_HA5VrBVHDdFuSXtsZguq2JSq9x9I5stan_mu1TOsmGkuO4vYC8W03z8TNOxuU7cKj5wsrI3uvw_gj8hbzkFikTmBIN2kHnvFeukUM0g1h3uw7VLb1Lirf4DMgeZCyxlbKofmFvZztf8dJZPetsfKd9YP2GdHCxAw0r1h1yQjihLrECIa3Pq_KF25cqNxwUAQSzpLUWEwXmHzb_gp3_rMljWTup0s0ZNtYQct0sYtwS5LzGarpKgbL4VpeWHWgArNIUThC2djDNOVWBrM7WZyy9fJm2nWQykjHJnaqjq9KA1iQaYHGtwHhm_86MR11HNtVvqd3J6bx_4EBRd0asOdD76XpXZis-MPj2dZpojcxpK7v7rc7x-7C8GpHKsqUeFpgSVbwgdGkoPoMkH5_NPPz2v0l_TwyR8e4Rw-E0irim-CbAgDU662bN9US_pnn2h3ZMaVDJnva0bk4kUcuBKbtwjfPAh6v6hImyEf8AJXktRrcMduKNDqrSnEIyMU78U=w1488-h788-no",
+			      		image_url: "http://gdurl.com/Z49S",
 			      		subtitle: "Built with React, this is a mock travel agency website with an emphasis on front end design and composition with React components.",
 			      		buttons: [
 				      		{ 
@@ -87,8 +87,35 @@ def deliver_bot_message(recipient_id)
 			      image_aspect_ratio: 'HORIZONTAL',
 			      elements: [
 		      		title: "Resume Bot utilizes a Rails server to respond to messages via fb messenger",
+		      		image_url: "http://gdurl.com/PmLF",
+		      		subtitle: "Tech used: Ruby, Rails, Facebook-Messenger Gem",
+		      		buttons: [
+		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Resume_Bot', title: "View GitHub Repo" }
+		      		]
+			      ]
+			    }
+			  }
+		  }
+		}, access_token: ENV['ACCESS_TOKEN']
+	)
+end
+
+def deliver_vacationer_message(recipient_id)
+	Bot.deliver(
+		{
+		  recipient: {
+		    id: recipient_id
+		  },
+		  message: {
+			  attachment: {
+			    type: 'template',
+			    payload: {
+			      template_type: 'generic',
+			      image_aspect_ratio: 'HORIZONTAL',
+			      elements: [
+		      		title: "Vacationer",
 		      		image_url: "https://lh3.googleusercontent.com/y1k0ynx9cApP6zrPX-p0r1T2WOC6qjoLvXn-jV405z7b5sFkuQCYcaL49pUv-_u5dsaD3PWqxDuKCzfh6ELKJQ9TTEOR2KmEWTpNs-5ezHbE5jXbXu706jO7yLzfzJO-ksNUppd6uhzsvaR19ZxNXFI291Cbwv6iVKDsh9Gs7UXdl0y9Thjw2z8hsuH4W9zBSz_PSKMvBNkLITrmD0rL_RyYzejb3lGQqMWNgvHtWnJYW9XW6VgS1HSUJZHZSlkAWkv-LzJ5RX55tRYIVe5G2Z9_Va4UreE4kPFZp1Aa_5hIGOJVFnAfuAz89QywsBjRCEnFi73ByC-OmfZQlqUgev3gFYlgyYVEJTHt-NsuQpb6H6QqVVL2It6lFVOo6ad3EmNgMs3XbFstfSg3iNESqhiobpD9KAxKnRusjQQkBjkepobeHSTBET6m4E9DbmZXFHwGKbbQAz1YE7qBMDr-3uLRHPecyN7zN73uDykDe0Wwoc6gD2nNUV2QzcBjsLCIWaH39YexbrMbl3zitJlcEu931L1YQmfChqrWwOg6JM4FQx-bi62pYMmBWqMWm9GcRGW2MqVym0exjFPIvcLPCOM0feb6cPVMkn6o6_9p4vO5kae3gyzI=w1486-h618-no",
-		      		subtitle: "Tech used: Ruby, Rails, PostGreSQL, Facebook-Messenger Gem",
+		      		subtitle: "Tech used: React.js, HTML, CSS, Javascript, Webpack, Babel",
 		      		buttons: [
 		      			{ type: 'web_url', url: 'https://github.com/JSumulong/Resume_Bot', title: "View GitHub Repo" }
 		      		]
@@ -121,7 +148,7 @@ Bot.on :message do |message|
 		      image_aspect_ratio: 'HORIZONTAL',
 		      elements: [
 	      		title: "Learn About Jon",
-	      		image_url: "https://lh3.googleusercontent.com/08Z3_UQi9Yqtu_liE8wc5GHygw_P0AD_qNbu2yId92MfUkMQObQS3qgQAdyfcYyGWlY774TsUrPjBThgp-hPme9kqdjlbfIweSPSuKtlUsscGYD77GAV3LoUCKT9qZwaeMmn3KGYRgRbWh8JG7JgnTItrrWdzSADCAfrCZ6DtpkjHUhNd8S9AG-3lvwWVL4B1RMCjiDK86vXfHgyMIpEWaycTTcqpPvTZ79mJp_tGGQlVsPqKDvjIyGygbsA6gM7ml9T_5c5oW4m7VY-pAy5xZkiUx3pQcbq9QwIT5nyTYLo8O9r_paRWxzO21Aa2Refi9eapYaI7jq50noCyAqQjuUBncrH_iIKKhOhkWxjxVeFlDmtaOGPwgdOijyhlbrP4XRO9Dz3ofsIyOdUtfHFgL5N7Ng9Of74LjyKtTcV3RfXYV2I4cyF1O2t6vvW-0iDR5ETGH8wY2H2qxyEh3xqM6Y3g6KG2xraH6hv0aNm0IQscVs3bFWQNiBtaSNcCoW7I5QvhLC_CVE5-bJqx2KzsJ2MKVvBCNDyihLdOLa7xs221uwqUKucIyX0J1L6GOMh2ioh3zgFINajf0DlgL4v9J_fKmrewe7C62u3wX6DW7LDDmLNiE7U=w1486-h684-no",
+	      		image_url: "http://gdurl.com/bKGc",
 	      		subtitle: "Click on one of the following buttons to find out more about Jon...",
 	      		buttons: [
 		      		{ type: 'postback', title: "Tell me about Jon", payload: 'ABOUT_JON' },
@@ -163,6 +190,8 @@ Bot.on :postback do |postback|
     	deliver_message(postback.sender['id'], "Testing one two three")
     when 'RESUME_BOT'
     	deliver_bot_message(postback.sender['id'])
+    when 'VACATIONER'
+    	deliver_vacationer_message(postback.sender['id'])
     else
     	deliver_message(postback.sender['id'], "I'm sorry, I didn't understand that...")
   end
