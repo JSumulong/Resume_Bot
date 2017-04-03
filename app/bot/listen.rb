@@ -180,6 +180,47 @@ def deliver_remindr_message(recipient_id)
 		}, access_token: ENV['ACCESS_TOKEN']
 	)
 end
+def deliver_skills_message(recipient)
+	Bot.deliver(
+		{
+		  recipient: {
+		    id: recipient
+		  },
+		  message: {
+			  attachment: {
+			    type: 'template',
+			    payload: {
+			      template_type: 'list',
+		      	top_element_style: 'compact',
+			      elements: [
+			      	{
+			      		title: "Javascript, Jasmine, and other related tech",
+			      		image_url: "http://gdurl.com/fu56",
+			      		subtitle: "Jon has experience with Javascript, HTML, CSS, Bootstrap, Express, JQuery, AJAX",
+			      	}, 
+		      		{
+		      			title: "Ruby, Rails, Sinatra, and RSpec",
+			      		image_url: "http://gdurl.com/fM7y",
+			      		subtitle: "Jon has built several Rails and Sinatra applications and tested with RSpec",
+			      	},
+			      	{
+			      		title: "React, React-Router, Babel, and Webpack",
+			      		image_url: "http://gdurl.com/IurI",
+			      		subtitle: "Jon has worked with React utilizing state, inline styles, and lifecycle hooks",
+			      	},
+			      	{
+			      		title: "Git & GitHub",
+			      		image_url: "http://gdurl.com/ojSc",
+			      		subtitle: "Ever since he started coding Jon has used git and GitHub for version control",
+			      	}
+			      ]
+			    }
+			  }
+		  }
+		}, access_token: ENV['ACCESS_TOKEN']
+	)
+
+end
 
 # Bot Response
 Bot.on :message do |message|
@@ -236,7 +277,7 @@ Bot.on :postback do |postback|
   	when 'ABOUT_JON'
     	deliver_message(postback.sender['id'], about_message)
     when 'SKILLS'
-    	deliver_message(postback.sender['id'], skills_message)
+    	deliver_skills_message(postback.sender['id'])
     when 'PROJECTS'
     	deliver_projects_message(postback.sender['id'])
     when 'SEE_RESUME'
@@ -257,7 +298,7 @@ end
 ##################
 # Old
 
-# def deliver_projects_message(recipient_id)
+# def deliver_message(recipient_id, message)
 # 	Bot.deliver(
 # 		{
 # 		  recipient: {
@@ -286,39 +327,39 @@ end
 # 	)
 # end
 
-about_message = "Jon is a full stack developer who loves to collaborate with others and turn ideas into applications. He graduated from Dev Bootcamp as a full stack developer and continues to teach himself more about web development. When he's not coding he enjoys spending time with his wife and son, playing racquetball, and reading.
+# about_message = "Jon is a full stack developer who loves to collaborate with others and turn ideas into applications. He graduated from Dev Bootcamp as a full stack developer and continues to teach himself more about web development. When he's not coding he enjoys spending time with his wife and son, playing racquetball, and reading.
 
-To find out more about what Jon learned at Dev Bootcamp and what he has been teaching himself just type 'skills' or click on the 'Jon's dev skills' button.
+# To find out more about what Jon learned at Dev Bootcamp and what he has been teaching himself just type 'skills' or click on the 'Jon's dev skills' button.
 
-You can also reach Jon by email at sumulong.jon@gmail.com"
+# You can also reach Jon by email at sumulong.jon@gmail.com"
 
-skills_message = "Here are some of Jon's skills as a developer: 
+# skills_message = "Here are some of Jon's skills as a developer: 
 
-Ruby on Rails,
-React.js,
-JavaScript,
-HTML,
-CSS,
-Bootstrap,
-JQuery,
-AJAX,
-Git,
-RSpec,
-Agile Development,
-Object Oriented Programming
+# Ruby on Rails,
+# React.js,
+# JavaScript,
+# HTML,
+# CSS,
+# Bootstrap,
+# JQuery,
+# AJAX,
+# Git,
+# RSpec,
+# Agile Development,
+# Object Oriented Programming
 
-To see some of these skills in action just type 'projects' or click on the'Jon's projects' button."
+# To see some of these skills in action just type 'projects' or click on the'Jon's projects' button."
 
-projects_message = "Jon has worked on some pretty cool projects. Here are a couple of recent projects: 
+# projects_message = "Jon has worked on some pretty cool projects. Here are a couple of recent projects: 
 
-Vacationer - This is a mock travel agency site built with React!
-http://vacationer-project-bucket.s3-website.us-east-2.amazonaws.com/ 
+# Vacationer - This is a mock travel agency site built with React!
+# http://vacationer-project-bucket.s3-website.us-east-2.amazonaws.com/ 
 
-Jon's Resume Bot - Want to see the code that Jon used to breathe digital life into my wires? check out this repository:
-https://github.com/JSumulong/jons_resume_bot
+# Jon's Resume Bot - Want to see the code that Jon used to breathe digital life into my wires? check out this repository:
+# https://github.com/JSumulong/jons_resume_bot
 
-Or you can take a look at his GitHub page here:
-https://github.com/JSumulong"
+# Or you can take a look at his GitHub page here:
+# https://github.com/JSumulong"
 
 
 
