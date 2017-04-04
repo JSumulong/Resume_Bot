@@ -273,16 +273,16 @@ end
 
 # Bot Response
 Bot.on :message do |message|
-  case message.text
-  when 'about'
-  	message.reply(text: about_message)
-  when 'skills'
-  	message.reply(text: skills_message)
-  when 'projects'
-  	message.reply(text: projects_message)
-  when "bye" 
-    message.reply(text: 'Bye and thanks for chatting with me!')
-  when "asdf"
+  # case message.text
+  # when 'about'
+  # 	message.reply(text: about_message)
+  # when 'skills'
+  # 	message.reply(text: skills_message)
+  # when 'projects'
+  # 	message.reply(text: projects_message)
+  # when "bye" 
+  #   message.reply(text: 'Bye and thanks for chatting with me!')
+  # when "asdf"
   	message.reply( #### this is experimental, not sure if it works yet ####
 			attachment: {
 		    type: 'template',
@@ -302,22 +302,22 @@ Bot.on :message do |message|
 		    }
 		  }
   	)
-  else
-  	message.reply(
-		  attachment: {
-		    type: 'template',
-		    payload: {
-		      template_type: 'button',
-		      text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
-		      buttons: [
-		        { type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
-		        { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
-		        { type: 'postback', title: "Projects", payload: 'PROJECTS' }
-		      ]
-		    }
-		  }
-		)
-  end
+  # else
+  # 	message.reply(
+		#   attachment: {
+		#     type: 'template',
+		#     payload: {
+		#       template_type: 'button',
+		#       text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
+		#       buttons: [
+		#         { type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
+		#         { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
+		#         { type: 'postback', title: "Projects", payload: 'PROJECTS' }
+		#       ]
+		#     }
+		#   }
+		# )
+  # end
 end
 
 # Postback response
