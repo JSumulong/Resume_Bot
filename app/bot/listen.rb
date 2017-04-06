@@ -4,6 +4,54 @@ include Facebook::Messenger
 
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
+def deliver_aboutMe_message(recipient)
+	Bot.deliver(
+		{
+		  recipient: {
+		    id: recipient
+		  },
+		  message: {
+			  attachment: {
+			    type: 'template',
+			    payload: {
+			      template_type: 'list',
+		      	top_element_style: 'compact',
+			      elements: [
+			      	{
+			      		title: "This is Jon. He's a passionate, full-stack developer.",
+			      		image_url: "http://gdurl.com/eYNN",
+			      		subtitle: "Questions? Coffee? Feel free to reach out to him at sumulong.jon@gmail.com",
+			      		buttons: [
+			      			{
+			      				type: 'web_url',
+			      				url: 'https://www.linkedin.com/in/jsumulong/',
+			      				title: "LinkedIn"
+			      			}
+			      		]
+			      	}, 
+		      		{
+		      			title: "Life long learner",
+			      		image_url: "http://gdurl.com/6NNBm",
+			      		subtitle: "Driven by curiosity and a love for tinkering, Jon is always learning new tech.",
+			      	},
+			      	{
+			      		title: "Collaborative",
+			      		image_url: "http://gdurl.com/tGTg",
+			      		subtitle: "Agile workflow, pair programming, group projects? Jon enjoys collaborating.",
+			      	},
+			      	{
+			      		title: "In a previous life he studied ancient languages",
+			      		image_url: "http://gdurl.com/rbdb",
+			      		subtitle: "From ancient Hebrew, Greek, and Akkadian to Javascript, Ruby, and Java.",
+			      	}
+			      ]
+			    }
+			  }
+		  }
+		}, access_token: ENV['ACCESS_TOKEN']
+	)
+end
+
 def deliver_projects_message(recipient_id)
 	Bot.deliver(
 		{
@@ -180,6 +228,7 @@ def deliver_remindr_message(recipient_id)
 		}, access_token: ENV['ACCESS_TOKEN']
 	)
 end
+
 def deliver_skills_message(recipient)
 	Bot.deliver(
 		{
@@ -224,16 +273,16 @@ end
 
 # Bot Response
 Bot.on :message do |message|
-  case message.text
-  when 'about'
-  	message.reply(text: about_message)
-  when 'skills'
-  	message.reply(text: skills_message)
-  when 'projects'
-  	message.reply(text: projects_message)
-  when "bye" 
-    message.reply(text: 'Bye and thanks for chatting with me!')
-  when "asdf"
+  # case message.text
+  # when 'about'
+  # 	message.reply(text: about_message)
+  # when 'skills'
+  # 	message.reply(text: skills_message)
+  # when 'projects'
+  # 	message.reply(text: projects_message)
+  # when "bye" 
+  #   message.reply(text: 'Bye and thanks for chatting with me!')
+  # when "asdf"
   	message.reply( #### this is experimental, not sure if it works yet ####
 			attachment: {
 		    type: 'template',
@@ -253,35 +302,33 @@ Bot.on :message do |message|
 		    }
 		  }
   	)
-  else
-  	message.reply(
-		  attachment: {
-		    type: 'template',
-		    payload: {
-		      template_type: 'button',
-		      text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
-		      buttons: [
-		        { type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
-		        { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
-		        { type: 'postback', title: "Projects", payload: 'PROJECTS' }
-		      ]
-		    }
-		  }
-		)
-  end
+  # else
+  # 	message.reply(
+		#   attachment: {
+		#     type: 'template',
+		#     payload: {
+		#       template_type: 'button',
+		#       text: "Hi, I'm Jon's Resume Bot. Nice to meet you! Can I tell you a little bit about Jon?",
+		#       buttons: [
+		#         { type: 'postback', title: "About Jon", payload: 'ABOUT_JON' },
+		#         { type: 'postback', title: "Jon's dev skills", payload: 'SKILLS' },
+		#         { type: 'postback', title: "Projects", payload: 'PROJECTS' }
+		#       ]
+		#     }
+		#   }
+		# )
+  # end
 end
 
 # Postback response
 Bot.on :postback do |postback|
 	case postback.payload
   	when 'ABOUT_JON'
-    	deliver_message(postback.sender['id'], about_message)
+    	deliver_aboutMe_message(postback.sender['id'])
     when 'SKILLS'
     	deliver_skills_message(postback.sender['id'])
     when 'PROJECTS'
     	deliver_projects_message(postback.sender['id'])
-    when 'SEE_RESUME'
-    	deliver_message(postback.sender['id'], "Testing one two three")
     when 'RESUME_BOT'
     	deliver_bot_message(postback.sender['id'])
     when 'VACATIONER'
