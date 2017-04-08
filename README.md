@@ -10,8 +10,9 @@ I learned a lot about connecting a webserver with Facebook and the approval proc
 ## Code Sample
 ![Image of code for Resume Bot](http://gdurl.com/PmLF)
 
-## Dependencies
+## Tech Used
 * Rails 5.02
 * Ruby 2.3.1p112
 * `facebook-messenger` gem
+* Facebook Messenger
 
